@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<% if (locals.postTitle && post_discription) { %>
+    <h1><%=postTitle %></h1>
+    <hr>
+    <p>
+    <%= post_discription %>
+    </p>
+<% } else{%>
+    <h1>post title</h1>
+    <hr>
+    <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed qui accusantium minima hic, quas, enim voluptate temporibus officia provident id amet voluptatum asperiores. Laboriosam similique facere sequi itaque officia error?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste explicabo neque deleniti repellat quo quis temporibus doloribus! Et, voluptatem, veritatis doloribus laborum, perferendis deserunt incidunt sint soluta quae quasi magni.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, quasi deserunt mollitia, quidem laboriosam consequatur quam repellendus, molestiae sint ipsum corporis distinctio. Illo quasi dolor alias libero aliquid pariatur esse!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum earum vero est quisquam illo facilis esse officia veritatis laboriosam, consequuntur perferendis provident numquam cumque modi corrupti explicabo doloremque id nisi?
+    </p>
+    <%}%>

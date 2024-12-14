@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <img class="main_page" src="images/main blog page.png">
+    <div class="mainText">
+        <p><h1 style="background-color: transparent;">Hello world: </h1>
+            <br>
+            full-stack project from Mousa Taha to create post edit and delete any blogs you want like say
+            any thing to the world 😇 ;
+            </p>
+    </div>
+</div>
+<h1>Posts: <hr></h1>
+
+     <% if (locals.postData) { %>
+        <% postData.forEach(posts => { %>
+            <div class="card">
+                <dive class="card_image">
+                    <img src="images/<%= posts.image %>">
+                </dive>
+                <div class="card_text">
+         <% if (posts.postTitle) { %>
+            <h1><%= posts.postTitle %></h1>
+         <% } else{%>
+            lorem post postTitle
+            <%}%>
+         <p><%= posts.post_discription%></p>
+        </div>
+        <form action="/viewMore/submit" method="post">
+            <input type="hidden" name="postTitle" value="<%= posts.postTitle %>">
+            <input type="hidden" name="post_discription" value="<%= posts.post_discription %>">
+            <input type="submit" value="view More..">
+         </form>
+    </div>
+        <% }) %>
+    
+     <% } else{%>
+        <div class="card">
+            <dive class="card_image">
+                <img src="images/teavm.png">
+            </dive>
+            <div class="card_text">
+     <h1>Post title</h1>
+     <p>Post dis</p>
+     <form action="/viewMore" method="get">
+        <input type="submit" value="ViewMore">
+     </form>
+    </div>
+</div>
+        <% } %>

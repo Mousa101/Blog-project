@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+<form action="/home" method="post">
+    <label for="file_input">Upload image: <br>
+        <img  src="/images/import.png" width="353px" height="260"alt="upload image" style="cursor: pointer;" >
+    </label>
+    
+    <input id="file_input" type="file" name="image"  style="display: none;" required>
+    <input type="submit" value="post"> <br>
+    <label>Blog title</label><br>
+    <input type="text" name="postTitle"  class="post_title" placeholder="Java is suck..."><br>
+    <label>Blog title</label><br>
+    <textarea style="width: 1277px;height: 94px;" name="post_discription" placeholder="java only for noobs..."></textarea>
+
+</form>
